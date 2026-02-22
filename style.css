@@ -28,17 +28,25 @@ body {
 
 
 /* text ================================================ */
+#startBtn {
+  background-color: black;
+  color: white;
+  height: 5%;
+  width: 5%;
+}
+
 #mainText1 {
+  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 1%;
   rotate: 0deg;
   font-family: 'variableFont';
   color: black;
   text-align: left;
   letter-spacing: 0;
   text-wrap: nowrap;
-  font-size: clamp(100px, 12vw, 150px);
+  font-size: clamp(65px, 12vw, 150px);
   line-height: 1.05;
 
 	font-variation-settings: "opsz" 144, "wght" 500, "GRAD" 150, "wdth" 150, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
@@ -47,18 +55,33 @@ body {
 
 
 #mainText2 {
+  display: none;
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: 1%;
   font-family: 'variableFont';
   color: gray;
   text-align: center;
   letter-spacing: 0;
   text-wrap: nowrap;
-  font-size: clamp(50px, 8vw, 100px);
+  font-size: clamp(35px, 8vw, 100px);
   line-height: 1.05;
   
 	font-variation-settings: "opsz" 144, "wght" 500, "GRAD" 150, "wdth" 150, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  transition: font-size 1s ease-in-out, font-variation-settings 1s ease-in-out;
+}
+
+#mainText3 {
+  display: none;
+  position: fixed;
+  font-family: 'variableFont';
+  color: white;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: clamp(35px, 8vw, 100px);
+  line-height: 1.05;
+  white-space: pre-line;
+	font-variation-settings: "opsz" 144, "wght" 250, "GRAD" 150, "wdth" 100, "slnt" -25, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
   transition: font-size 1s ease-in-out, font-variation-settings 1s ease-in-out;
 }
 
@@ -71,6 +94,7 @@ body {
     will-change: transform, opacity;
     font-family: 'variableFont';
     color: black;
+    text-align: center;
   }
 
 /* Image ================================================ */
