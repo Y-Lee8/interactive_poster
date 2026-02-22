@@ -1,0 +1,40 @@
+/* ↔️ max-width + ↕️ max-height ================================================ */
+
+@media only screen and (max-height: 600px) and (max-width: 800px) {
+  body {
+    /* background-color: #00ff00; */
+  }
+
+  #mainText1 {
+    top: 20%;
+    rotate: 10deg;
+    font-size: clamp(50px, 12vw, 150px);
+    line-height: 1.05;
+	  font-variation-settings: "opsz" 8, "wght" 750, "GRAD" -200, "wdth" 50, "slnt" -10, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+
+  }
+  
+  #mainText2 {
+    font-size: clamp(32px, 8vw, 100px);
+    rotate: -10deg;
+    line-height: 1.05;
+	  font-variation-settings: "opsz" 144, "wght" 500, "GRAD" -200, "wdth" 25, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  }
+  
+}
+
+@keyframes fly {
+    from {
+      transform:
+        translate(0, 0)
+        rotate(var(--rot-start));
+      opacity: 1;
+    }
+
+    to {
+      transform:
+        translate(var(--dx), var(--dy))
+        rotate(var(--rot-end));
+      opacity: 0;
+    }
+  }
