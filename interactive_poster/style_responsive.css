@@ -1,0 +1,51 @@
+/* ↔️ max-width + ↕️ max-height ================================================ */
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-color: #03045e;;
+  }
+
+  #mainText1 {
+    color: #00b4d8;
+    top: 10%;
+    rotate: 10deg;
+    font-size: clamp(50px, 12vw, 150px);
+    line-height: 1.05;
+	  font-variation-settings: "opsz" 8, "wght" 1000, "GRAD" -200, "wdth" 50, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  }
+  
+  #mainText2 {
+    font-size: clamp(32px, 8vw, 100px);
+    bottom: 7%;
+    right: 5%;
+    color: #0077b6;
+    rotate: -10deg;
+    line-height: 1.05;
+	  font-variation-settings: "opsz" 144, "wght" 500, "GRAD" -200, "wdth" 25, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  }
+  
+  .particle {
+    color: #90e0ef;
+    font-size: 15px;
+  }
+
+  #mainText3 {
+  display: block;
+  }
+}
+
+@keyframes fly {
+    from {
+      transform:
+        translate(0, 0)
+        rotate(var(--rot-start));
+      opacity: 1;
+    }
+
+    to {
+      transform:
+        translate(var(--dx), var(--dy))
+        rotate(var(--rot-end));
+      opacity: 0;
+    }
+  }
