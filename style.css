@@ -28,6 +28,11 @@ body {
 
 
 /* text ================================================ */
+#image {
+  position: fixed;
+  width: 400px;
+}
+
 #startBtn {
   background-color: black;
   color: white;
