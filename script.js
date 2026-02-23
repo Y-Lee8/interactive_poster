@@ -78,17 +78,32 @@ if (SpeechRecognition) {
   //✅ Define keywords and what happens when they are spoken
   //==============================================================
     const keywords = {
-      "What day": () => {
+      "special guest": () => {
+        document.querySelector("#mainText2").textContent = "⇤ Shrink Window";
+        symbols = ["Who is it?"];
+      },
+      "performance": () => {
+        document.querySelector("#image").src = "./img/tiri_oracle2.jpg";
+      },
+      "new media design": () => {
+        document.querySelector("#image").src = "./img/morakana_deeptalking.jpg";
+      },
+      "what day will this event be": () => {  
+        document.querySelector("#image").src = "";
         document.querySelector("#mainText3").textContent = "Friday,\n2/27/26";
+        symbols = ["2/27"];
       },
-      "What time": () => {
+      "what time": () => {
         document.querySelector("#mainText3").textContent = "4:30 PM EST";
+        symbols = ["4:30 PM"];
       },
-      "Where": () => {
+      "where is it": () => {
         document.querySelector("#mainText3").textContent = "808 Commonwealth Ave.\nin Room 410,\nOr on Zoom";
+        symbols = ["808 comm ave", "room 410"];
       },
-      "Thank you": () => {
+      "thank you for listening": () => {
         document.querySelector("#mainText3").textContent = "See you then!";
+        symbols = ["2/27", "4:30 PM", "808 comm ave", "room 410"];
       },
     };
 
@@ -104,7 +119,7 @@ if (SpeechRecognition) {
       const lowerTranscript = transcript.toLowerCase();
       for (const key in keywords) { 
         if (lowerTranscript.includes(key.toLowerCase())) { // Check if keyword is spoken
-          document.querySelector("#mainText2").textContent = key; // Display the keyword
+          document.querySelector("#mainText2").textContent = key.toLowerCase(); // Display the keyword
           keywords[key](); // Run the keyword action
           break; // Stop checking after first match
         }
